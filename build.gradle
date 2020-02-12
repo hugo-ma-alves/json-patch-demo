@@ -18,6 +18,8 @@ dependencies {
 	compile group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.2.30'
 	compile group: 'javax.json', name: 'javax.json-api', version: '1.1.4'
 	compile group: 'org.apache.johnzon', name: 'johnzon-core', version: '1.2.3'
+	compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr353', version: '2.10.2'
+
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

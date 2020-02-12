@@ -1,4 +1,4 @@
-package hugomaalves.github.io.jsonpatchdemo.exceptions;
+package io.github.hugomaalves.jsonpatchdemo.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
