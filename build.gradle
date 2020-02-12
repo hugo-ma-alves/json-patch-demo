@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'hugo-ma-alves.github.io'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+	compile group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.2.30'
+	compile group: 'javax.json', name: 'javax.json-api', version: '1.1.4'
+	compile group: 'org.apache.johnzon', name: 'johnzon-core', version: '1.2.3'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
