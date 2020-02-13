@@ -57,6 +57,7 @@ public class UserService {
     }
 
     public void patchUser(JsonPatch patchDocument, String email) {
+        //Gets the original user from the database
         User originalUser = getUserByEmail(email);
         logger.debug("original user  {}", originalUser);
 
@@ -65,10 +66,11 @@ public class UserService {
         //Applies the patch to the original user
         JsonValue patchedUser = patchDocument.apply(target);
 
+        //Converts the JsonValue to a User instance
         User modifiedUser = objectMapper.convertValue(patchedUser, User.class);
         logger.debug("modified user {}", modifiedUser);
 
+        //Saves the modified user in the database
         usersList.put(email, modifiedUser);
-
     }
 }
